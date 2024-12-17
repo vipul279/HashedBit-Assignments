@@ -17,7 +17,7 @@ export default function Ipltable() {
           throw new Error("Failed to fetch data.");
         }
         const data = await response.json();
-        console.log("Fetched Data:", data); // Log the data
+        console.log("Fetched Data:", data); 
         const sortedData = data.sort((a, b) => a.NRR - b.NRR);
         setTeams(sortedData);
       } catch (err) {
