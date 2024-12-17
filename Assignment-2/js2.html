@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 50px;
+            margin-right: 6px;
+        }
+        button{
+            width: 30px;
+            height: 25px;
+            border: 1px solid gray;
+            border-radius: 50%;
+            font-size: 15px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p>Enter 2 numbers</p>
+    <input type="number" class="num1">
+    <input type="number" class="num2">
+    <p>Select operation to be performed</p>
+    <button class="operation" onclick="calculate('add', '+')">+</button>
+    <button class="operation" onclick="calculate('subtract', '-')">-</button>
+    <button class="operation" onclick="calculate('multiply', 'x')">x</button>
+    <button class="operation" onclick="calculate('divide', '/')">/</button>
+    <p class="result"></p>
+
+
+    <script>
+        function calculate(operation,symbol){
+            let num1 = ( document.querySelector('.num1').value);
+            let num2 = (document.querySelector('.num2').value);
+
+            if (num1===''|| num2==='') {
+                document.querySelector('.result').textContent = "Please enter valid numbers.";
+                return;
+            }
+            let result=0;
+            switch (operation) {
+                case 'add':
+                    result=num1+num2;
+                    break;
+                
+                case 'subtract':
+                    result=num1-num2;
+                    break;
+
+                case 'multiply': 
+                    result=num1*num2;
+                    break;
+
+                case 'divide':
+                    result = num2!=0 ? num1/num2 :document.querySelector('.result').innerHTML='Cannot divide by zero';
+                    break; 
+
+                default:
+                    consol.log("Invalid");
+                    break;
+            }
+
+            document.querySelector('.result').innerHTML=`${num1} ${symbol} ${num2}=${result}`;
+        }
+    </script>
+</body>
+</html>

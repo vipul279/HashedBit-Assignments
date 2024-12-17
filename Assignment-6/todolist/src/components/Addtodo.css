@@ -1,0 +1,29 @@
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(241, 235, 243);
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 30px;
+}
+form{
+    font-weight:500;
+    font-size: 18px;
+}
+form input{
+    border-radius: 14px;
+    border: none;
+    padding: 7px;
+    margin-left: 8px;
+    margin-top: 18px;
+}
+form button{
+    margin-top: 30px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding:5px 14px 5px 14px;
+    color: white;
+    background-color: rgb(68, 233, 123);
+}

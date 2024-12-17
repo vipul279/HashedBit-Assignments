@@ -1,0 +1,9 @@
+.sidebar{
+    position: fixed;
+    top: 136px;
+    left: 0;
+    height: 541px;
+    width: 140px;
+    overflow: scroll;
+    margin-left: 5px;
+}

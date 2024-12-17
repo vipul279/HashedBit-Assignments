@@ -1,0 +1,43 @@
+<!-- Write a function to perform this. You are given two numbers n1 and n2. You need to find the sum of the products of their corresponding digits. So, for a number n1= 6 and n2 = 34, you'll do (6*4)+(0*3) = 24. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter 2 numbers</p>
+    <input type="number" class="num1">
+    <input type="number" class="num2">
+    <button onclick="sumofproductofdigits(document.querySelector('.num1').value,document.querySelector('.num2').value)">Find</button>
+    <p class="result"></p>
+
+    <script>
+        sumofproductofdigits=(num1,num2)=>{
+            let sum=0;
+            
+            while(num1!==0 || num2!==0){
+                let digit1=num1%10;
+                let digit2=num2%10;
+                console.log(digit1,digit2);
+
+                sum+=digit1*digit2;
+                console.log(sum);
+
+                num1=Math.floor(num1/10);
+                num2=Math.floor(num2/10);
+                console.log(num1,num2);
+
+            }
+                
+            
+
+            document.querySelector('.result').innerHTML=sum;
+            
+
+        }
+    </script>
+</body>
+</html>

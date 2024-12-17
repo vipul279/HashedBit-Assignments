@@ -1,0 +1,30 @@
+nav{
+    position: fixed;
+    top: 58px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: white;
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    border-bottom: 1px solid black;
+    
+}
+.navelement a{
+    margin: 5px 90px 5px 90px;
+
+    color: black;
+    font-size: 17px;
+    vertical-align: top;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.navelement img{
+    height: 35px;
+    margin-right: 7px;
+}
+

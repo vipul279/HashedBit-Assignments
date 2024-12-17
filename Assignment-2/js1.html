@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HashedBit Assignment-2</h1>
+    <p>Even numbers between 1 to 100</p>
+    <button class="even-button" onclick="getnums()">Get Even Numbers</button>
+    <div class="evennum"></div>
+</body>
+<script>
+    function getnums() {
+        if(document.querySelector('.even-button').innerHTML==='Get Even Numbers'){
+            for(let i=1;i<=100;i++){
+                if(i%2===0 ){
+                    console.log(i);
+                    document.querySelector('.evennum').innerHTML+=`${i}  `;
+
+                }
+            } 
+            document.querySelector('.even-button').innerHTML='Clear Numbers';
+
+        }
+        else{
+            document.querySelector('.even-button').innerHTML='Get Even Numbers';
+            document.querySelector('.evennum').innerHTML='';
+        }
+      
+    }
+</script>
+</html>
+

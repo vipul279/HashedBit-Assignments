@@ -1,0 +1,17 @@
+footer{
+    background-color: rgb(103, 98, 90);
+    color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer div{
+    margin-left: 100px;
+    margin-right: 100px;
+}
